@@ -1,0 +1,42 @@
+:root {
+  --vp-c-brand-1: #ff3366;
+  --vp-c-brand-2: #ff6688;
+  --vp-font-family-base: 'Pretendard', 'Inter', sans-serif;
+  --vp-font-family-mono: 'Fira Code', monospace;
+  --vp-c-bg: #0a0a0a;
+  --vp-c-bg-alt: #111111;
+  --vp-c-text-1: #eeeeee;
+}
+
+/* 글래스모피즘 효과 적용 */
+.VPSidebar { 
+  background-color: rgba(10, 10, 10, 0.6) !important; 
+  backdrop-filter: blur(12px) !important; 
+  border-right: 1px solid rgba(255, 51, 102, 0.15) !important;
+}
+
+/* 네비게이션 바 블러 */
+.VPNav {
+  background-color: rgba(10, 10, 10, 0.6) !important; 
+  backdrop-filter: blur(12px) !important;
+  border-bottom: 1px solid rgba(255, 51, 102, 0.15) !important;
+}
+
+/* 배경 프리미엄 그라데이션 */
+.VPDoc { 
+  background: radial-gradient(circle at top right, rgba(255, 51, 102, 0.08), transparent 500px),
+              radial-gradient(circle at bottom left, rgba(51, 102, 255, 0.05), transparent 500px); 
+}
+
+/* 제목 폰트 포인트 */
+h1, h2, h3, h4, .name {
+  font-family: 'Outfit', 'Pretendard', sans-serif !important;
+  letter-spacing: -0.02em;
+}
+
+/* 히어로 섹션 다이나믹 그라데이션 */
+.bg {
+  background: conic-gradient(from 180deg at 50% 50%, #2a8af6 0deg, #a853ba 180deg, #ff3366 360deg);
+  filter: blur(100px);
+  opacity: 0.3;
+}
