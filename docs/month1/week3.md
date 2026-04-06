@@ -139,7 +139,45 @@ public void BadWhileLoop()
 
 ---
 
-### 📅 [Day 5] 흐름 제어 방탈출 모의고사
+### 📅 [Day 5] 🕹️ 미니 프로젝트 & 흐름 제어 방탈출
+
+이번 주에 배운 `switch` 로켓 엘리베이터와 `for` 컨베이어 벨트를 동시에 돌려보는 10분 미니 프로젝트입니다!
+
+#### 🎮 [미니 프로젝트] 빛의 속도 로켓 엘리베이터 분배기
+1.  **준비:** 유니티 씬에 큐브를 하나 만들고 `ElevatorTest` 스크립트를 답니다.
+2.  **코드 작성:**
+```csharp
+using UnityEngine;
+
+public class ElevatorTest : MonoBehaviour 
+{
+    [SerializeField] private int targetFloor = 50; // 유니티 화면에서 바꿀 수 있는 층수
+
+    void Start() 
+    {
+        // 1. switch문 (로켓 엘리베이터)
+        switch (targetFloor) 
+        {
+            case 1: Debug.Log("1층: 슬라임 던전 도착"); break;
+            case 50: Debug.Log("50층: 드래곤 둥지 0.1초만에 꽂힘!"); break;
+            default: Debug.Log("없는 층수입니다."); break;
+        }
+
+        // 2. for문 (컨베이어 벨트)
+        for (int i = 0; i < 5; i++) 
+        {
+            Debug.Log($"파티클 흩뿌리기! (현재 횟수: {i + 1}/5)");
+        }
+    }
+}
+```
+3.  **쾌감의 순간:** 유니티 에디터 화면에서 `targetFloor` 슬롯을 마우스로 드래그해서 1이나 50으로 바꾼 다음 플레이(▶) 버튼을 눌러보십시오. 
+    *   코드 `if`를 50번 두드리지 않고 단숨에 50층 콘솔 글씨가 뜨고,
+    *   그 직후 파티클 콘솔이 정확히 '5번' 반복해서 주르륵! 뜨고 멈추는 깔끔한 흐름 통제를 목격하게 될 것입니다!
+
+---
+
+#### 🧩 흐름 제어 종합 모의고사
 
 방탈출의 시간입니다! 아래 AI의 끔찍한 하드코딩 코드를 보고 속으로 호통을 쳐 주십시오.
 

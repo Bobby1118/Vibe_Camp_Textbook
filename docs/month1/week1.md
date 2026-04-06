@@ -276,7 +276,31 @@ public class MonsterLogic : MonoBehaviour
 
 ---
 
-### 📅 [Day 5] 종합 모의고사 (아키텍처 믹서기 방탈출)
+### 📅 [Day 5] 🕹️ 미니 프로젝트 & 아키텍처 방탈출
+
+이번 주에 배운 가장 짜릿한 기능인 **"인스펙터 구멍 뚫기"**를 실제로 해보는 10분짜리 미니 프로젝트입니다.
+
+#### 🎮 [미니 프로젝트] 마법의 키오스크 유니티에 꽂기
+1.  **준비:** 유니티를 켜고 빈 큐브(Cube)를 하나 만듭니다.
+2.  **생성:** `KioskMenu`라는 C# 스크립트를 생성하고 큐브에 드래그해서 붙여줍니다.
+3.  **코드 작성:** 아래 코드를 복사해서 스크립트 안에 그대로 붙여넣습니다.
+```csharp
+using UnityEngine;
+
+public enum BurgerMenu { CheeseBurger, ChickenBurger, ShrimpBurger }
+
+public class KioskMenu : MonoBehaviour 
+{
+    [Header("주문 키오스크 화면")]
+    [SerializeField] private BurgerMenu myChoice;
+    [SerializeField] private int orderCount = 1;
+}
+```
+4.  **쾌감의 순간:** 코드를 저장하고 유니티 화면 중앙의 큐브를 클릭해 보십시오! 우측 인스펙터 창에 대문자 오타를 낼 수 없는 **완벽한 "드롭다운(▼) 화살표"**가 생성되었을 겁니다. 마우스로 `ShrimpBurger`를 딸깍! 선택해 보는 쾌감을 느껴보십시오!
+
+---
+
+#### 🧩 종합 모의고사 (아키텍처 믹서기 방탈출)
 
 한 주간 정말 고생하셨습니다! 이제 당신은 코드를 단 한 줄도 직접 치지 않고도 C# 핵심 아키텍처의 결함을 모조리 꿰뚫어 보는 아트 디렉터가 되었습니다. 아래 종합 퀴즈를 속으로 가볍게 풀어보고 1주 차를 영광스럽게 마무리합시다.
 

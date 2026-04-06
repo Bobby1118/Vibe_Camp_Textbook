@@ -123,7 +123,54 @@ public class Monster
 
 ---
 
-### 📅 [Day 5] Month 1 총결산 방탈출 시험
+### 📅 [Day 5] 🕹️ 미니 프로젝트 & Month 1 최종 방탈출
+
+한 달간 배운 것의 결정체! 새로운 객체(붕어빵)를 뿅! 하고 무에서 유로 찍어내는 마법을 직접 경험해 보는 마지막 주차 미니 프로젝트입니다.
+
+#### 🎮 [미니 프로젝트] 붕어빵 마을과 광장의 팁 박스
+1.  **코드 작성:** 유니티에 `MonsterSpawner` 스크립트를 만들고 아래처럼 딱 복붙합니다.
+```csharp
+using UnityEngine;
+
+// 1. 무쇠 붕어빵 틀 도면 (화면에 아직 안 보임)
+public class Monster 
+{
+    public string name;
+    public static int totalDeadCount = 0; // 광장 공용 팁 박스
+
+    // 강제 출생신고서
+    public Monster(string bornName) {
+        name = bornName;
+    }
+
+    public void Die() {
+        totalDeadCount++; // 죽을 때 공용 팁 박스 숫자 1 올림
+        Debug.Log($"{name} 사망! (현재 전 우주 사망자: {totalDeadCount}명)");
+    }
+}
+
+// 2. 유니티에서 버튼 누르면 실행될 공장장 스크립트!
+public class MonsterSpawner : MonoBehaviour 
+{
+    void Start() 
+    {
+        // 도면으로 실체 붕어빵 3마리를 뿅뿅뿅 찍어냄!
+        Monster orc1 = new Monster("오크 대장");
+        Monster orc2 = new Monster("오크 졸개");
+        Monster goblin = new Monster("고블린");
+
+        // 얘들이 차례대로 죽으면 광장 공유(static) 전광판 숫자가 어떻게 오르나 볼까요?
+        orc1.Die();
+        orc2.Die();
+        goblin.Die();
+    }
+}
+```
+2.  **쾌감의 순간:** 스크립트를 큐브에 넣고 플레이(▶)를 누르면! 콘솔 창에 사망자 숫자가 **1 -> 2 -> 3으로 누적되면서** 몬스터들이 죽는 모습이 나옵니다. 100만 마리의 몬스터도 빵 틀(`Class`) 하나와 팁 박스(`static`) 1개로 전 우주를 관장할 수 있게 되었습니다!
+
+---
+
+#### 🧩 Month 1 총결산 방탈출 시험
 
 1달의 여정이 정말 고생 많으셨습니다. 단순 텍스트 번역가를 넘어, AI의 하드코딩 쓰레기 구조를 색출하는 디렉터로 거듭나신 것을 축하드립니다.
 마지막 방탈출 과제로 아키텍처의 세계를 완성하십시오!
