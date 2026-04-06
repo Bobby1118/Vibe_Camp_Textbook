@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: '/Vibe_Camp_Textbook/',
   title: "Vibe Coding Camp",
   description: "게임 아티스트를 위한 C# 오케스트레이션 교재",
   cleanUrls: true,
