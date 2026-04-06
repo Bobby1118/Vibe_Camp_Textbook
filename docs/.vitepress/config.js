@@ -14,7 +14,8 @@ export default defineConfig({
   themeConfig: {
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Month 1', link: '/month1/week1' }
+      { text: 'Month 1', link: '/month1/week1' },
+      { text: 'Month 2', link: '/month2/week1' }
     ],
     sidebar: [
       {
@@ -25,6 +26,15 @@ export default defineConfig({
           { text: 'Week 3: 흐름의 통제', link: '/month1/week3' },
           { text: 'Week 4: 붕어빵 공장', link: '/month1/week4' },
           { text: 'Week 5: 실전 유니티 적용', link: '/month1/week5' }
+        ]
+      },
+      {
+        text: 'Month 2: 엔진과 OOP 결합',
+        items: [
+          { text: 'Week 1: 생명 주기 (Lifecycle)', link: '/month2/week1' },
+          { text: 'Week 2: 에디터 인테리어 (Inspector)', link: '/month2/week2' },
+          { text: 'Week 3: 컴포넌트 통신망 (GetComponent)', link: '/month2/week3' },
+          { text: 'Week 4: 타이머와 알람시계 (Coroutine)', link: '/month2/week4' }
         ]
       }
     ],
